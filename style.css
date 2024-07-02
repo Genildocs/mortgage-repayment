@@ -5,3 +5,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  body {
+    @apply font-plus-jakarta-sans;
+  }
+
+  .i-radio {
+    @apply p-2 rounded-md border-solid border-2 border-black;
+  }
+}

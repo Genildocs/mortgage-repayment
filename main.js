@@ -1,7 +1,8 @@
 import './style.css';
+import { form } from './js/form.js';
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <h1 class="text-3xl font-bold underline">Formulario de hipoteca</h1>
+    ${form}
   </div>
 `;
