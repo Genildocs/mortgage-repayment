@@ -11,7 +11,11 @@
     @apply font-plus-jakarta-sans;
   }
 
+  .fildeset-inputs {
+    @apply p-2 rounded-md border-solid border-[1px] border-black flex justify-between gap-2;
+  }
+
   .i-radio {
-    @apply p-2 rounded-md border-solid border-2 border-black;
+    @apply p-2 rounded-md border-solid border-[1px] border-black;
   }
 }
