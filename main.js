@@ -1,7 +1,6 @@
-import './style.css';
-import { form } from './js/form.js';
-
-document.querySelector('#app').innerHTML = `
+import "./style.css";
+import { validateForm, form, calculateRepayments } from "./modules/index.js";
+document.querySelector("#app").innerHTML = `
   <div>
     ${form}
     <div class="px-4 mt-4 bg-slate-500">
@@ -16,4 +15,9 @@ document.querySelector('#app').innerHTML = `
     </div>
     
   </div>
+
+  
 `;
+const forms = document.forms[0];
+const btnSubmit = document.getElementById("calculate-repayments");
+calculateRepayments(btnSubmit, forms);
