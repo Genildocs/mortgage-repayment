@@ -1,6 +1,7 @@
-import "./style.css";
-import { validateForm, form, calculateRepayments } from "./modules/index.js";
-document.querySelector("#app").innerHTML = `
+import './style.css';
+import { form, calculateRepayments, validateForm } from './modules/index.js';
+
+document.querySelector('#app').innerHTML = `
   <div>
     ${form}
     <div class="px-4 mt-4 bg-slate-500">
@@ -9,7 +10,7 @@ document.querySelector("#app").innerHTML = `
       <div>
         <div>
           <p>Your monthly repayment</p>
-          <span>$ 1,797.74</span>
+          <span>$ 1,797.74</span>          
         </div>
       </div>
     </div>
@@ -18,6 +19,10 @@ document.querySelector("#app").innerHTML = `
 
   
 `;
+
 const forms = document.forms[0];
-const btnSubmit = document.getElementById("calculate-repayments");
-calculateRepayments(btnSubmit, forms);
+const formsElements = forms.elements;
+const btnSubmit = document.getElementById('calculate-repayments');
+
+// functions
+calculateRepayments(btnSubmit, validateForm, formsElements);

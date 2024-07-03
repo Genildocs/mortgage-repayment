@@ -1,7 +1,12 @@
-function calculateRepayments(btnSubmit, formElement) {
-  btnSubmit.addEventListener("click", (event) => {
+function calculateRepayments(
+  btnElement,
+  validateForm,
+  formsElement,
+  amountError
+) {
+  btnElement.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log("calculating");
+    const error = validateForm(formsElement);
   });
 }
 
