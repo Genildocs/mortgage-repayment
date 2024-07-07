@@ -38,7 +38,10 @@ const form = `
     </fieldset>
       ${radio}
     <div class="flex items-center justify-center mt-5 p-2 bg-yellow-500 rounded-2xl">
-      <button id="calculate-repayments" type="submit">Calculate Repayments</button>
+      <button id="calculate-repayments" type="submit" class="flex gap-2 font-bold">
+      <img src="../assets/images/icon-calculator.svg" alt="" />
+      Calculate Repayments
+      </button>
     </div>
 </form>
 `;

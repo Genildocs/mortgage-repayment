@@ -16,7 +16,7 @@
   }
 
   .i-radio {
-    @apply p-2 rounded-md border-solid border-[1px] border-black;
+    @apply p-2 rounded-md border-solid border-[1px] border-black cursor-pointer hover:border-yellow-400;
   }
 
   .i-invalid {
