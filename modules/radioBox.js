@@ -2,7 +2,7 @@ const radio = `
     <fieldset>
         <legend>Mortgage type</legend>
         <div class="i-radio my-3">
-            <input type="radio" value="Repayment" id="repayment" name="mortgage" checked  />
+            <input type="radio" value="Repayment" id="repayment" name="mortgage"   />
             <label for="fixed">Repayment</label>
         </div>
         <div class="i-radio">
@@ -10,5 +10,6 @@ const radio = `
             <label for="interest-only">Interest Only</label>
         </div>
     </fieldset>
+    <span id="radio-error" class="text-red-500"></span> 
 `;
 export { radio };

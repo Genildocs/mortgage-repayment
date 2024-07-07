@@ -1,7 +1,9 @@
-import './style.css';
-import { form, calculateRepayments, validateForm } from './modules/index.js';
+import "./style.css";
+import { form } from "./modules/form.js";
+import { inputFormat } from "./modules/inputFormat.js";
+import Joi, { func } from "joi";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
   <div>
     ${form}
     <div class="px-4 mt-4 bg-slate-500">
@@ -22,7 +24,71 @@ document.querySelector('#app').innerHTML = `
 
 const forms = document.forms[0];
 const formsElements = forms.elements;
-const btnSubmit = document.getElementById('calculate-repayments');
-
+const btnSubmit = document.getElementById("calculate-repayments");
+inputFormat(formsElements);
 // functions
-calculateRepayments(btnSubmit, validateForm, formsElements);
+function errorDisplay(erroForm, valueValidate) {
+  const elementsForm = ["amount", "term", "rate"];
+
+  elementsForm.forEach((el) => {
+    const erroInput = document.getElementById(`${el}-error`);
+    if (erroForm && erroForm.details.find((e) => e.context.key === el)) {
+      erroInput.textContent = erroForm.details[0].message;
+    } else {
+      erroInput.textContent = "";
+    }
+  });
+
+  const erroRadioInput = document.getElementById("radio-error");
+  if (!valueValidate.repayment && !valueValidate.interest) {
+    erroRadioInput.textContent = "This field is required";
+  } else {
+    erroRadioInput.textContent = "";
+  }
+}
+
+function validateForm(amount, term, rate, repayment, interest) {
+  const schema = Joi.object({
+    amount: Joi.number().min(1).required(),
+    term: Joi.number().min(1).max(50).required(),
+    rate: Joi.number().required(),
+    repayment: Joi.required(),
+    interest: Joi.required(),
+  });
+
+  const { error, value } = schema.validate({
+    amount: parseFloat(amount.value),
+    term: parseFloat(term.value),
+    rate: parseFloat(rate.value),
+    repayment: repayment.checked,
+    interest: interest.checked,
+  });
+
+  return { error, value };
+}
+
+function calculteRepayments(formElement) {
+  const { amount, term, rate } = formElement;
+
+  const repayment = formElement.mortgage[0];
+  const interest = formElement.mortgage[1];
+
+  const { error, value } = validateForm(
+    amount,
+    term,
+    rate,
+    repayment,
+    interest
+  );
+
+  errorDisplay(error, value);
+}
+
+function submit() {
+  btnSubmit.addEventListener("click", function (e) {
+    e.preventDefault();
+    calculteRepayments(formsElements);
+  });
+}
+
+submit();

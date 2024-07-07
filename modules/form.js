@@ -1,4 +1,4 @@
-import { radio } from './radioBox.js';
+import { radio } from "./radioBox.js";
 
 const form = `
 <form class="px-4 pt-4"  >
@@ -16,23 +16,25 @@ const form = `
         <label for="mortgage-amount">Mortgage Amount</label>
         <div class="fildeset-inputs">
           <span>$</span>
-          <input type="text" name="amount" id="mortgage-amount" class="outline-none flex-1" />          
+          <input type="text" name="amount" value="" id="mortgage-amount" class="outline-none flex-1" />          
         </div>
-        <span id="amount-error" class="text-red-500"></span>        
+        <span id='amount-error' class="text-red-500"></span>        
     </fieldset>
     <fieldset class="flex flex-col">
         <label for="mortgage-term">Mortgage Term</label>
         <div class="fildeset-inputs">
          <input type="text" name="term" id="mortgage-term"  class="outline-none flex-1"  />
          <span>years</span>
-        </div>       
+        </div>
+        <span id="term-error" class="text-red-500"></span>       
     </fieldset>
     <fieldset class="flex flex-col">
         <label for="interest">Interest Rate</label>
         <div class="fildeset-inputs">
           <input type="text" name="rate" id="mortgage-interest"  class="outline-none flex-1"  />
           <span>%</span>
-        </div>        
+        </div>
+        <span id="rate-error" class="text-red-500"></span>       
     </fieldset>
       ${radio}
     <div class="flex items-center justify-center mt-5 p-2 bg-yellow-500 rounded-2xl">
