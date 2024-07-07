@@ -18,4 +18,8 @@
   .i-radio {
     @apply p-2 rounded-md border-solid border-[1px] border-black;
   }
+
+  .i-invalid {
+    @apply border-red-500 border-[1px] border-solid font-mono text-red-500;
+  }
 }

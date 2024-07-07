@@ -69,7 +69,6 @@ function validateForm(amount, term, rate, repayment, interest) {
 
 function calculteRepayments(formElement) {
   const { amount, term, rate } = formElement;
-
   const repayment = formElement.mortgage[0];
   const interest = formElement.mortgage[1];
 
@@ -80,6 +79,10 @@ function calculteRepayments(formElement) {
     repayment,
     interest
   );
+
+  if (!error) {
+    console.log("vamos calcular");
+  }
 
   errorDisplay(error, value);
 }
