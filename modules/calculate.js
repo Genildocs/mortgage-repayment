@@ -1,4 +1,4 @@
-function calculate(value) {
+function calculateRepayments(value) {
   const displayValue = document.getElementById('monthValue');
   const displayTotValue = document.getElementById('totValue');
   const displayCalculate = document.getElementById('completed');
@@ -29,4 +29,4 @@ function calculate(value) {
 
 function displayCalculate() {}
 
-export { calculate };
+export { calculateRepayments };

@@ -2,10 +2,9 @@ import './style.css';
 import {
   form,
   inputFormat,
-  formatNumber,
   validateForm,
   errorDisplay,
-  calculate,
+  calculateRepayments,
 } from './modules/index.js';
 
 document.querySelector('#app').innerHTML = `
@@ -51,7 +50,7 @@ const interest = formsElements.mortgage[1];
 const classFieldSet = document.querySelectorAll('.fildeset-inputs');
 
 inputFormat(formsElements);
-function calculteRepayments(event) {
+function main(event) {
   event.preventDefault();
   const { error, value } = validateForm(
     amount,
@@ -62,14 +61,14 @@ function calculteRepayments(event) {
   );
   console.log(value);
   if (!error) {
-    calculate(value);
+    calculateRepayments(value);
   }
 
   errorDisplay(error, value, classFieldSet);
 }
 
 const btnSubmit = document.getElementById('calculate-repayments');
-btnSubmit.addEventListener('click', calculteRepayments);
+btnSubmit.addEventListener('click', main);
 
 // function calculate(radioOption, formatNumber) {
 //   const amountValue = formatNumber;
