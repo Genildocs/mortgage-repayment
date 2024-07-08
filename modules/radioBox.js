@@ -1,6 +1,6 @@
 const radio = `
     <fieldset>
-        <legend>Mortgage type</legend>
+        <legend class="font-bold">Mortgage type</legend>
         <div class="i-radio my-3">
             <input type="radio" value="Repayment" id="repayment" name="mortgage" class="cursor-pointer"  />
             <label for="fixed">Repayment</label>

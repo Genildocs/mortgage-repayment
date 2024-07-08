@@ -11,15 +11,23 @@
     @apply font-plus-jakarta-sans;
   }
 
-  .fildeset-inputs {
-    @apply p-2 rounded-md border-solid border-[1px] border-black flex justify-between gap-2;
+  label{
+    @apply font-bold;
   }
 
-  .i-radio {
-    @apply p-2 rounded-md border-solid border-[1px] border-black cursor-pointer hover:border-yellow-400;
+  .fildeset-inputs {
+    @apply rounded-md border-solid border-[1px] border-black flex justify-between gap-2 font-bold mt-2;
+  }
+
+  .b-radius{
+    @apply rounded-br-md rounded-tr-md
+  }
+
+ .i-radio {
+    @apply p-2 rounded-md border-solid border-[1px] border-black cursor-pointer hover:border-lime;
   }
 
   .i-invalid {
-    @apply border-red-500 border-[1px] border-solid font-mono text-red-500;
+    @apply border-red-500 border-[1px] border-solid ;
   }
 }

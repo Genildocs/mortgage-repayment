@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         'plus-jakarta-sans': ['Plus Jakarta Sans', 'sans-serif'],
       },
+      colors:{
+        lime: '#d7da2f'
+      }
     },
   },
   plugins: [],
