@@ -10,16 +10,20 @@ function calculateRepayments(value) {
       (value.amount * (ratePerMonth * Math.pow(1 + ratePerMonth, years))) /
       (Math.pow(1 + ratePerMonth, years) - 1);
     totalRepayment = monthlyRepayment * years;
-
     contentValue(monthlyRepayment, totalRepayment)
     handleToogle()
-  } else {
-    monthlyRepayment = (value.amount * (ratePerMonth / 100)) / 12;
-    totalRepayment = value.amount + monthlyRepayment * years;
 
-    contentValue(monthlyRepayment, totalRepayment)
-    handleToogle()
+  }else{
+    if (value.interest){
+      monthlyRepayment = (value.amount * (ratePerMonth / 100)) / 12;
+      totalRepayment = value.amount + monthlyRepayment * years;
+
+      contentValue(monthlyRepayment, totalRepayment)
+      handleToogle()
+    }
   }
+
+
 }
 
 

@@ -10,6 +10,6 @@ const radio = `
             <label for="interest-only">Interest Only</label>
         </div>
     </fieldset>
-    <span id="radio-error" class="text-red-500"></span> 
+    <span id="radio-error" class="text-red-500 md:text-[14px]"></span> 
 `;
 export { radio };

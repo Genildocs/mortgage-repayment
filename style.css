@@ -11,7 +11,11 @@
     @apply font-plus-jakarta-sans;
   }
 
-  label{
+  .main{
+        @apply bg-slate-400 sm:p-8  md:flex justify-center items-center md:min-h-screen
+    }
+
+    label{
     @apply font-bold;
   }
 
@@ -30,4 +34,6 @@
   .i-invalid {
     @apply border-red-500 border-[1px] border-solid ;
   }
+
+
 }
