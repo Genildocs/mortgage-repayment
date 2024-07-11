@@ -1,5 +1,5 @@
 import { radio } from "./radioBox.js";
-
+import iconCalculate from '../assets/images/icon-calculator.svg'
 const form = `
 <form class="px-4 sm:px-8 pt-4 sm:pt-8  md:flex-1 md:p-5 md:px-8"   >
     <fieldset class="mb-3 sm:flex items-center justify-between">
@@ -41,7 +41,7 @@ const form = `
       ${radio}
     <div class="flex items-center justify-center mt-5 px-2 py-3  bg-lime hover:bg-amber-200 rounded-3xl sm:w-[70%] ">
       <button id="calculate-repayments" type="submit" class="flex gap-2 font-bold ">
-      <img src="/assets/images/icon-calculator.svg" alt="" />
+      <img src=${iconCalculate} alt="icon calculate" />
       Calculate Repayments
       </button>
     </div>
