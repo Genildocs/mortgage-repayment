@@ -6,14 +6,14 @@ import {
   errorDisplay,
   calculateRepayments,
 } from "./modules/index.js";
-
+import image_1 from './assets/images/illustration-empty.svg'
 document.querySelector("#app").innerHTML = `
   <div class="bg-white sm:rounded-md md:rounded-2xl md:flex  md:w-[800px] md:h-[500px] ">
     ${form}
     <div class=" p-4 mt-4 md:mt-0 bg-slate-800 md:flex-1 md:flex items-center md:rounded-br-2xl md:rounded-tr-2xl md:b-radius-content-result ">     
     <div class="block" id="empty">
       <div class="flex justify-center ">
-        <img src="/assets/images/illustration-empty.svg">
+        <img src=${image_1} alt="image calculate">
       </div>
       <div class="text-center">
         <h1 class="mb-2 font-bold text-2xl text-white">Results show here</h1>
