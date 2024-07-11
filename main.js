@@ -13,7 +13,7 @@ document.querySelector("#app").innerHTML = `
     <div class=" p-4 mt-4 md:mt-0 bg-slate-800 md:flex-1 md:flex items-center md:rounded-br-2xl md:rounded-tr-2xl md:b-radius-content-result ">     
     <div class="block" id="empty">
       <div class="flex justify-center ">
-        <img src="./assets/images/illustration-empty.svg">
+        <img src="/assets/images/illustration-empty.svg">
       </div>
       <div class="text-center">
         <h1 class="mb-2 font-bold text-2xl text-white">Results show here</h1>

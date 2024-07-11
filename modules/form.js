@@ -41,7 +41,7 @@ const form = `
       ${radio}
     <div class="flex items-center justify-center mt-5 px-2 py-3  bg-lime hover:bg-amber-200 rounded-3xl sm:w-[70%] ">
       <button id="calculate-repayments" type="submit" class="flex gap-2 font-bold ">
-      <img src="../assets/images/icon-calculator.svg" alt="" />
+      <img src="/assets/images/icon-calculator.svg" alt="" />
       Calculate Repayments
       </button>
     </div>
