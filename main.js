@@ -11,7 +11,7 @@ document.querySelector("#app").innerHTML = `
   <div class="bg-white sm:rounded-md md:rounded-2xl md:flex  md:w-[800px] md:h-[500px] ">
     ${form}
     <div class=" p-4 mt-4 md:mt-0 bg-slate-800 md:flex-1 md:flex items-center md:rounded-br-2xl md:rounded-tr-2xl md:b-radius-content-result ">     
-    <div class="hidden" id="empty">
+    <div class="block" id="empty">
       <div class="flex justify-center ">
         <img src="./assets/images/illustration-empty.svg">
       </div>
@@ -21,7 +21,7 @@ document.querySelector("#app").innerHTML = `
       </div>
     </div>
 
-    <div class=" block  md:self-start md:p-3" id="completed">
+    <div class=" hidden  md:self-start md:p-3" id="completed">
       <div>
         <h1 class="mb-2 font-bold text-2xl md:text-[1rem] text-white">Your results</h1>
         <p class="mb-3 md:mb-[2rem] text-sm text-slate-300">Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
